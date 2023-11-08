@@ -19,7 +19,7 @@ func main() {
 	sampleCount := 1000
 // period := 100 * time.Millisecond
 // period := time.Millisecond
-	period := time.Microsecond
+	period := 5 * time.Microsecond
 	traceFile := "trace.out"
 
 	flag.IntVar(&globalGarbage, "globalGarbage", globalGarbage, "global garbage count")
