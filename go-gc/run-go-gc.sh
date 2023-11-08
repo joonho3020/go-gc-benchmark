@@ -49,3 +49,5 @@ GOMAXPROCS=4  taskset -c 0,1,2,3,4,5,6,7 ./main.riscv >> GO_GC_RESULTS.out
 
 echo "GOMAXPROCS 8" >> GO_GC_RESULTS.out
 GOMAXPROCS=8  taskset -c 0,1,2,3,4,5,6,7 ./main.riscv >> GO_GC_RESULTS.out
+
+poweroff -f
