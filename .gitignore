@@ -1,2 +1,5 @@
 main
 OUT
+*.out
+*.x86
+**/*.riscv

@@ -39,7 +39,7 @@ def parse_output_file(file_name: str):
 def run(go_max_procs: int, cores_to_pin: list[int]):
   cores_to_pin_str = [str(x) for x in cores_to_pin]
   task_cores = ','.join(cores_to_pin_str)
-  cmd = f'GOMAXPROCS={go_max_procs} taskset -c {task_cores} ./main > OUT'
+  cmd = f'GOMAXPROCS={go_max_procs} taskset -c {task_cores} ./main.x86 > OUT'
   bash(cmd)
   return parse_output_file('OUT')
 
@@ -54,7 +54,6 @@ def run_all_configs():
       cores_to_pin = [x for x in range(thread_cnt)]
       (p50, p90, p99) = run(go_max_procs, cores_to_pin)
       p99_stats_per_thread_cnt.append(p99)
-      print(p99)
     p99_stats.append(p99_stats_per_thread_cnt)
 
   df = pd.DataFrame(p99_stats, columns = [f'cpu {x}' for x in all_thread_cnts], index = [f'go_max {x}' for x in all_go_max_procs])
