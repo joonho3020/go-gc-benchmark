@@ -7,7 +7,6 @@ main.x86: main.go
 
 main.riscv: main.go
 	GOOS=linux GOARCH=riscv64 go build -o $@ $^
-	mv $@ go-gc/overlay/root
 
 .PHONY: clean
 clean:
