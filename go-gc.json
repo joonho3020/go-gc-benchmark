@@ -3,6 +3,5 @@
   "base" : "br-base.json",
   "overlay" : "overlay",
   "host-init" : "host-init.sh",
-  "run": "run-go-gc.sh",
   "outputs" : [ "/root/GO_GC_RESULTS.out" ]
 }
