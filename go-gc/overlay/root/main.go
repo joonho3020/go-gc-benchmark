@@ -16,7 +16,7 @@ func main() {
 	globalGarbage := 9
 	childGarbage := 17
 	mainGarbage := 0
-	sampleCount := 100000
+	sampleCount := 1000
 // period := 100 * time.Millisecond
 // period := time.Millisecond
 	period := 10 * time.Microsecond
