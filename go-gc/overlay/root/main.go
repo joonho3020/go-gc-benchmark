@@ -16,10 +16,10 @@ func main() {
 	globalGarbage := 9
 	childGarbage := 17
 	mainGarbage := 0
-	sampleCount := 1000
+	sampleCount := 100000
 // period := 100 * time.Millisecond
 // period := time.Millisecond
-	period := time.Microsecond
+	period := 10 * time.Microsecond
 	traceFile := "trace.out"
 
 	flag.IntVar(&globalGarbage, "globalGarbage", globalGarbage, "global garbage count")
